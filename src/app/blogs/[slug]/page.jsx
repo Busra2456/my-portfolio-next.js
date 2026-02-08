@@ -1,15 +1,16 @@
 import React from 'react';
 
-const page = ({params}) => {
-      // const {slug} =  params
-      console.log(params.slug)
-      const {category,name,img} = blogs.find((blog) => blog.slug == params.slug)
+const page = async({params}) => {
+      const {slug} = await params;
+     
+      const blog = blogs.find((blog) => blog.slug === slug)
+      const {category,name,img}= blog;
       return (
-            <div>
+            <div className='text-center m-6 space-y-2'>
                  
-                <h1>{category}</h1>
-                 <h1>{name}</h1>
-                  <h1><img src={img} alt="" /></h1>
+                <h1 className='text-2xl'>{category}</h1>
+                 <h1 className='text-zinc-600'>{name}</h1>
+                  <h1><img className="w-xl mx-auto mt-6" src={img} alt="" /></h1>
             </div>
       );
 };

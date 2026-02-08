@@ -24,10 +24,26 @@ const Navbar = () => {
                   title : "blogs",
                   path : '/blogs'
             },
+              {
+                  title : "categories",
+                  path : '/categories'
+            },
+            {
+                  title : "posts",
+                  path : '/posts'
+            },
       ];
       const handelLogin = () =>{
             router.push('/about')
       }
+
+      if(pathName.includes("dashboard"))
+            return(
+     
+      <div className="bg-amber-400 p-6">
+            dashboard Layout
+      </div>
+      )
       return (
             <nav className="bg-red-400 pr-10 pl-3 py-4 flex justify-between items-center text-xl">
         <h6 className="text-3xl">My <span className="text-red-800">Portfolio</span></h6>

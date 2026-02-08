@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
        <Navbar/>
-        <div className="h-screen">
+        <div className="">
           {children}
 
         </div>
       
-        <footer>This is footer</footer>
+        <footer className="bg-fuchsia-700 p-5">This is footer</footer>
       </body>
     </html>
   );

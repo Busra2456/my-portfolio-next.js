@@ -3,11 +3,16 @@ import Link from "next/link";
 
 const blogPage = () => {
       return (
-            <div className="h-screen">
+            <div className=" ">
                   <h1>blog page</h1>
+                  <div className="grid grid-cols-4 text-center gap-5 m-6">
+
+                 
            {
             blogs.map((blog)=>( <div key={blog.category} className="border p-12" >
+                <div className="space-y-2">
                   <h1>{blog.slug}</h1>
+                  <h1><img className="w-[100px] mx-auto" src={blog.img} alt="" /></h1>
                   <h1>{blog.category}</h1>
                     
                                     <h1>{blog.name}</h1>
@@ -15,14 +20,14 @@ const blogPage = () => {
                     <h1>{blog.seller}</h1>
 
   <h1>Price : {blog.price}</h1>
-
-<button className="btn btn-success">
+</div>
+<button className="btn btn-success mt-4 w-full bg-amber-950 text-white pt-3 py-5 rounded-xl">
     <Link 
     href={`/blogs/${blog.slug}`}>View Details</Link>
   
     </button>
             </div> ))
-           }
+           } </div>
             </div>
       );
 };
