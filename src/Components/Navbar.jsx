@@ -36,6 +36,10 @@ const Navbar = () => {
                   title : "Meals",
                   path : '/meals'
             },
+             {
+                  title : "Gallery",
+                  path : '/gallery'
+            },
       ];
       const handelLogin = () =>{
             router.push('/about')
