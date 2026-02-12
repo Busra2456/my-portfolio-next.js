@@ -10,6 +10,15 @@ const nextConfig = {
       pathname:"/**"
     }
     ]
+  },
+  redirects : async () =>{
+    return [
+      {
+        source: '/about',
+        destination: '/posts',
+        permanent: true,
+      }
+    ]
   }
 };
 
