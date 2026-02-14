@@ -5,22 +5,25 @@ export const metadata = {
   keywords: ["about","about page"]
 };
 
-const getTime = async ()=>{
-      const res = await fetch("http://localhost:3000/time",
-            // {cache: 'no-store'}
-            {next: {revalidate : 5}}
+// const getTime = async ()=>{
+//       const res = await fetch("http://localhost:3000/time",
+//             // {cache: 'no-store'}
+//             {next: {revalidate : 5}}
 
-      );
-      const data = await res.json()
-      console.log(data)
-      return data.currentTime ;
-}
+//       );
+//       const data = await res.json()
+//       console.log(data)
+//       return data.currentTime ;
+// }
 
-const AboutPage = () => {
-      const currentTime = getTime();
+export const revalidate = 5;
+
+const AboutPage = async () => {
+      // const currentTime = await getTime();
+      // const currentTime = new Date().toLocaleTimeString();
       return (
             <div>
-                  <h3>Time : {currentTime} </h3>
+                  {/* <h3>Time : {currentTime} </h3> */}
                   <h1>about page</h1>
                   <AboutHeader></AboutHeader>
             </div>

@@ -8,6 +8,7 @@ const Navbar = () => {
       const pathName = usePathname();
       const router = useRouter();
       const links = [
+          
             {
                   title : "About",
                   path : '/about'
@@ -28,10 +29,11 @@ const Navbar = () => {
                   title : "categories",
                   path : '/categories'
             },
-            {
+               {
                   title : "posts",
                   path : '/posts'
             },
+           
              {
                   title : "Meals",
                   path : '/meals'

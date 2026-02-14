@@ -1,6 +1,6 @@
 
 const getDetailsPost = async (id) =>{
-      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${id}`)
       const data = await res.json()
       // console.log(data);
       return data
@@ -8,7 +8,7 @@ const getDetailsPost = async (id) =>{
 
 export const generateMetadata = async ({params}) =>{
       const { id } = await params;
-      const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts/${id}`)
       const postData = await res.json()
       return{
             title:postData.title,
