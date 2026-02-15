@@ -12,8 +12,8 @@ const page = () => {
                                src={`/images/${img}.jpg`} 
                                alt=""
                               //  alt={`Image ${img}`}
-                               height="1080" 
-                               width="1080"/>
+                               height="500" 
+                               width="500"/>
                         ))
                   }
                   </div>  
