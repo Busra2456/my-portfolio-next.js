@@ -18,9 +18,13 @@ export const metadata = {
 //       return data.currentTime ;
 // }
 
-export const revalidate = 5;
+// export const revalidate = 5;
 
 const AboutPage = async () => {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/time`, {
+    cache: "no-store", 
+  });
+  const data = await res.json();
 
 //       const res = await 
 //      fetch("http://localhost:3000/time",
@@ -34,7 +38,7 @@ const AboutPage = async () => {
       const currentTime = new Date().toLocaleTimeString();
       return (
             <div>
-                  <h3>Time : {currentTime} </h3>
+                  <h3>Time : {data.currentTime} </h3>
                   <h1>about page</h1>
                   <AboutHeader></AboutHeader>
             </div>
