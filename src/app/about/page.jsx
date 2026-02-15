@@ -1,4 +1,4 @@
-export const dynamic = "force-dynamic";
+// export const dynamic = "force-dynamic";
 import AboutHeader from '@/Components/AboutHeader';
 export const metadata = {
   title: "About",
