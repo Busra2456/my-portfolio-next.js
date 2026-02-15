@@ -7,7 +7,7 @@ export const metadata = {
 
 const getTime = async ()=>{
       const res = await 
-     fetch(`${process.env.NEXT_PUBLIC_API_URL}/time`,
+     fetch("http://localhost:3000/time",
             // {cache: 'no-store'}
             {next: {revalidate : 5}}
 
