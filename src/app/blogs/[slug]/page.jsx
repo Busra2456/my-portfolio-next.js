@@ -15,6 +15,14 @@ const page = async({params}) => {
       );
 };
 
+export async function generateStaticParams() {
+//   const blogs = await fetch(blogs).then((res) => res.json())
+ 
+  return blogs.map((blog) => ({
+    slug: blog.slug,
+  }))
+}
+
 const blogs = [
     { "slug": "1",
         "category": "Men's Sneaker",

@@ -1,4 +1,4 @@
-export async function GET(){
+ async function GET(){
       return Response.json({
             currentTime : new Date().toLocaleTimeString()
       })

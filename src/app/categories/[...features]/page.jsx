@@ -1,5 +1,5 @@
 
-const CategoriesDetailsPage =async ({params}) => {
+const CategoriesDetailsPage = async ({params}) => {
       const {features} = await params;
       // console.log({params})
       if(features.length == 3)
@@ -13,5 +13,13 @@ const CategoriesDetailsPage =async ({params}) => {
             </div>
       );
 };
+
+export async function generateStaticParams() {
+  return [
+    { features: ["a"] },
+    { features: ["a", "b"] },
+    { features: ["a", "b", "c"] },
+  ];
+}
 
 export default CategoriesDetailsPage;

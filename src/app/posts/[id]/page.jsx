@@ -35,4 +35,12 @@ const PostDetailsPage = async ({params}) => {
       );
 };
 
+export async function generateStaticParams() {
+  const posts = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/posts`).then((res) => res.json())
+ 
+  return posts?.slice(0,10).map((post) => ({
+    id: post.id.toString(),
+  }))
+}
+
 export default PostDetailsPage;
