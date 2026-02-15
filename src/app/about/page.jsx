@@ -21,7 +21,7 @@ export const metadata = {
 // export const revalidate = 5;
 
 const AboutPage = async () => {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/time`, {
+        const res = await fetch(`${process.env.PUBLIC_API_URL}/time`, {
     cache: "no-store", 
   });
   const data = await res.json();
