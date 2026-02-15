@@ -16,14 +16,14 @@ export const metadata = {
 //       return data.currentTime ;
 // }
 
-export const revalidate = 5;
+// export const revalidate = 5;
 
 const AboutPage = async () => {
       // const currentTime = await getTime();
-      const currentTime = new Date().toLocaleTimeString();
+      // const currentTime = new Date().toLocaleTimeString();
       return (
             <div>
-                  <h3>Time : {currentTime} </h3>
+                  {/* <h3>Time : {currentTime} </h3> */}
                   <h1>about page</h1>
                   <AboutHeader></AboutHeader>
             </div>
