@@ -6,19 +6,19 @@ export const metadata = {
   keywords: ["about","about page"]
 };
 
-const getTime = async ()=>{
-      const res = await 
-     fetch("http://localhost:3000/time",
-            // {cache: 'no-store'}
-            {next: {revalidate : 5}}
+// const getTime = async ()=>{
+//       const res = await 
+//      fetch("http://localhost:3000/time",
+//             // {cache: 'no-store'}
+//             {next: {revalidate : 5}}
 
-      );
-      const data = await res.json()
-      console.log(data)
-      return data.currentTime ;
-}
+//       );
+//       const data = await res.json()
+//       console.log(data)
+//       return data.currentTime ;
+// }
 
-// export const revalidate = 5;
+export const revalidate = 5;
 
 const AboutPage = async () => {
 
@@ -30,8 +30,8 @@ const AboutPage = async () => {
 //       );
 //       const data = await res.json()
 
-      const currentTime = await getTime();
-      // const currentTime = new Date().toLocaleTimeString();
+      // const currentTime = await getTime();
+      const currentTime = new Date().toLocaleTimeString();
       return (
             <div>
                   <h3>Time : {currentTime} </h3>
