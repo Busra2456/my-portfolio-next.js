@@ -43,9 +43,9 @@ const Navbar = () => {
                   path : '/gallery'
             },
       ];
-      // const handelLogin = () =>{
-      //       router.push('/about')
-      // }
+      const handelLogin = () =>{
+            router.push('/gallery')
+      }
 
       if(pathName.includes("dashboard"))
             return(
@@ -65,7 +65,7 @@ const Navbar = () => {
                   links?.map((link) =><Link className={`${pathName === link.path && "text-fuchsia-800"}`} key={link.path} href={link.path}>{link.title}</Link>)
             }
           </ul>
-          {/* <button onClick={handelLogin}>Login</button> */}
+          <button onClick={handelLogin}>Login</button>
         </nav>
       );
 };
