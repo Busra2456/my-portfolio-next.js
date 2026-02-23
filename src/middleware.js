@@ -14,5 +14,5 @@ return NextResponse.next();
 }
 
 export const config = {
-      matcher :['/dashboard/:path*','/service/:path*']
+      matcher :['/dashboard/:path*',]
 }

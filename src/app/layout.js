@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Roboto } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Navbar";
+import AuthProvider from "@/services/AuthProvider";
 
 const roboto = Roboto({
   weight : ['400','500','700','900'],
@@ -27,10 +28,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+       <AuthProvider>
       <body
         className={`${geistSans.variable} ${geistMono.variable}
           ${roboto.className} antialiased`}
       >
+       
        <Navbar/>
         <div className="">
           {children}
@@ -38,7 +41,9 @@ export default function RootLayout({ children }) {
         </div>
       
         <footer className="bg-fuchsia-700 p-5">This is footer</footer>
+       
       </body>
+       </AuthProvider>
     </html>
   );
 }

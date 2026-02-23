@@ -1,12 +1,16 @@
 "use client"
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import Image from "next/image";
 
 
 
 const Navbar = () => {
       const pathName = usePathname();
       const router = useRouter();
+      const session = useSession();
+      console.log(session)
       const links = [
           
             {
@@ -43,8 +47,8 @@ const Navbar = () => {
                   path : '/gallery'
             },
       ];
-      const handelLogin = () =>{
-            router.push('/gallery')
+      const handler = () =>{
+            router.push('/api/auth/signin')
       }
 
       if(pathName.includes("dashboard"))
@@ -65,9 +69,21 @@ const Navbar = () => {
                   links?.map((link) =><Link className={`${pathName === link.path && "text-fuchsia-800"}`} key={link.path} href={link.path}>{link.title}</Link>)
             }
           </ul>
-          <button onClick={handelLogin}>Login</button>
+       
+         {session.status === "authenticated" ? <button onClick={handler}>Login</button> : <button onClick={handler}>Logout</button>
+         }
+         <div>
+            <h6>
+                  <Image height={50} width={50} alt={session?.data?.user?.name} src={session?.data?.user?.image}/>
+                  <br />
+                  {session?.data?.user?.name}
+                  <br />
+                   {session?.data?.user?.type}
+            </h6>
+         </div>
         </nav>
       );
 };
 
 export default Navbar;
+

@@ -1,5 +1,5 @@
 
-const ServicePage = () => {
+const page = () => {
       return (
             <div>
                   <h1>Service Page</h1>
@@ -7,4 +7,4 @@ const ServicePage = () => {
       );
 };
 
-export default ServicePage;
+export default page;
