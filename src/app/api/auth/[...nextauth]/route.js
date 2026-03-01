@@ -65,46 +65,46 @@ export const authOptions = {
 }
 const handler = NextAuth(authOptions);
 
-const users = [
-     {
-          id: 1,
-          name : "thuya",
-          email : "thuya@gmail.com",
-          type : "member",
-          password : "password",
-          image : "https://picsum.photos/200/300"
-     },
-        {
-          id: 2,
-          name : "raisa",
-          email : "raisa@gmail.com",
-          type : "member",
-          password : "password",
-          image : "https://picsum.photos/200/300"
-     },
-        {
-          id: 3,
-          name : "maisha",
-          email : "maisha@gmail.com",
-          type : "member",
-          password : "password",
-          image : "https://picsum.photos/200/300"
-     },
-        {
-          id: 4,
-          name : "earshad",
-          email : "earshad@gmail.com",
-          type : "admin",
-          password : "password",
-          image : "https://picsum.photos/200/300"
-     },
-        {
-          id: 5,
-          name : "busra",
-          email : "hasna@gmail.com",
-          type : "admin",
-          password : "password",
-          image : "https://picsum.photos/200/300"
-     },
-]
+// const users = [
+//      {
+//           id: 1,
+//           name : "thuya",
+//           email : "thuya@gmail.com",
+//           type : "member",
+//           password : "password",
+//           image : "https://picsum.photos/200/300"
+//      },
+//         {
+//           id: 2,
+//           name : "raisa",
+//           email : "raisa@gmail.com",
+//           type : "member",
+//           password : "password",
+//           image : "https://picsum.photos/200/300"
+//      },
+//         {
+//           id: 3,
+//           name : "maisha",
+//           email : "maisha@gmail.com",
+//           type : "member",
+//           password : "password",
+//           image : "https://picsum.photos/200/300"
+//      },
+//         {
+//           id: 4,
+//           name : "earshad",
+//           email : "earshad@gmail.com",
+//           type : "admin",
+//           password : "password",
+//           image : "https://picsum.photos/200/300"
+//      },
+//         {
+//           id: 5,
+//           name : "busra",
+//           email : "hasna@gmail.com",
+//           type : "admin",
+//           password : "password",
+//           image : "https://picsum.photos/200/300"
+//      },
+// ]
 export {handler as GET, handler as POST };
